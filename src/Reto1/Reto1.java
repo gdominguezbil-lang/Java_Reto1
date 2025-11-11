@@ -340,4 +340,7 @@ public class Reto1 {
 		System.out.println("Los paises con mayor desigualdad son: \n" + pais[pais1] + ": " + String.format(Locale.US, "%.2f", aMedias[0]) + "\n" + pais[pais2] + ": " + 
 		String.format(Locale.US, "%.2f", aMedias[1]) + "\n" + pais[pais3] + ": " + String.format(Locale.US, "%.2f", aMedias[2]));
 	}
+	/*
+	 * Esto es para probar a aver si hace el commit y eso
+	 */
 }
