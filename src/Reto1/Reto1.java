@@ -79,7 +79,7 @@ public class Reto1 {
 			scReed2.close();
 
 			// Aquí empezaremos con el menú, donde atenderemos a las necesidades del
-			// ejercicio
+			// ejercici
 
 			do {
 				System.out.println(
