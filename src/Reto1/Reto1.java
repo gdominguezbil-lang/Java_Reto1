@@ -167,14 +167,10 @@ public class Reto1 {
 	public static void mediaDinero(Scanner sc, int cantidad, String[] pais, String[] ubi, double[] trabajo,
 			double[] dinero, double[] conoci, double[] tiempo, double[] poder, double[] salud) {
 
-		double dineroTot = 0;
 		double dineroMedia = 0;
+		
+		dineroMedia = media(sc, dinero, cantidad);
 
-		for (int i = 0; i < cantidad; i++) {
-			dineroTot = dineroTot + dinero[i];
-		}
-
-		dineroMedia = dineroTot / cantidad;
 		System.out.println("\nLa media del parámetro 'DINERO' para los 28 países es " + dineroMedia + "\n\n");
 	}
 
@@ -193,16 +189,12 @@ public class Reto1 {
 	public static void paisesSuperiorMediaTiempo(Scanner sc, int cantidad, String[] pais, String[] ubi,
 			double[] trabajo, double[] dinero, double[] conoci, double[] tiempo, double[] poder, double[] salud) {
 
-		double tiempoTot = 0;
 		double tiempoMedia = 0;
 		int contad = 0;
 		int contad2 = 0;
 		String cadenaPaises = "";
 
-		for (int i = 0; i < cantidad; i++) {
-			tiempoTot = tiempoTot + tiempo[i];
-		}
-		tiempoMedia = tiempoTot / cantidad;
+		tiempoMedia = media(sc, tiempo, cantidad);
 
 		for (int i = 0; i < cantidad; i++) {
 			if (tiempo[i] > tiempoMedia) {
@@ -341,6 +333,16 @@ public class Reto1 {
 		String.format(Locale.US, "%.2f", aMedias[1]) + "\n" + pais[pais3] + ": " + String.format(Locale.US, "%.2f", aMedias[2]));
 	}
 	/*
-	 * Esto es para probar a aver si hace el commit y eso
+	 * Aquí hacemos lo que se solicita para poder tener la puntuación ''extra'', haciendo una funcion y usarla en la media del tiempo y del dinero
 	 */
+	public static double media(Scanner sc, double[] dato, int cantidad) {
+		double datoTotal = 0;
+		double datoMedia = 0;
+		for(int i = 0; i < cantidad; i++) {
+			datoTotal = datoTotal + dato[i];
+		}
+		datoMedia = datoTotal/cantidad;
+		return datoMedia;
+		
+	}
 }
